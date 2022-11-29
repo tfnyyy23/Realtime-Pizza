@@ -14,10 +14,23 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $inputan['name'] = 'Admin';
-        $inputan['email'] = 'admin@gmail.com';
-        $inputan['password'] = ('admin-nct');
-        $inputan['role'] = 'admin';
-        User::create($inputan);
+        $user = [
+            [
+                'name' => 'Admin',
+                'email' => 'admin@gmail.com',
+                'password' => 'admin-nct',
+                'role' => 'admin'
+            ],
+            [
+                'name' => 'Admin 1',
+                'email' => 'administrator@gmail.com',
+                'password' => 'nct-admin',
+                'role' => 'admin'
+            ],
+        ];
+
+        foreach($user as $key => $value){
+            User::create($value);
+        }
     }
 }

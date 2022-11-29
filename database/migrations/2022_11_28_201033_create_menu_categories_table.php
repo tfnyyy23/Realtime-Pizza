@@ -14,7 +14,7 @@ class CreateMenuCategoriesTable extends Migration
     public function up()
     {
         Schema::create('menu_categories', function (Blueprint $table) {
-            $table->id('id_menu_category');
+            $table->id();
             $table->string('menu_category');
             $table->timestamps();
         });
