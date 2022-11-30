@@ -131,7 +131,7 @@ class MenuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, $id_user)
     {
         $user = User::find($id_user);
         if ($user->role == 'admin') {
@@ -196,7 +196,7 @@ class MenuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, $id_user)
     {
         $user = User::find($id_user);
         if ($user->role == 'admin') {
