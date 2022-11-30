@@ -17,7 +17,7 @@ class CreateChartsTable extends Migration
             $table->id();
             $table->integer('id_user');
             $table->integer('id_menu');
-            $table->integer('name_menu');
+            $table->string('name_menu');
             $table->string('size_menu');
             $table->integer('price_menu');
             $table->integer('quantity_order');
